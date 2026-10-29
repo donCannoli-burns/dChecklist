@@ -45,3 +45,9 @@ The first command lists available checklist targets; the second runs the `crimbo
 ## Known issues
 
 The upstream implementation does not recognize bound familiars and may double-count IOTMs when bound and unbound forms are both present.
+
+## Consolidation status (2026-10-29)
+
+A hardened, read-only implementation now ships with [don_custom_functions](https://github.com/donCannoli-burns/don_custom_functions): `pChecklist.ash`, `don_checklist.ash`, and `don_checklist_lib.ash`, with the public checklist data and upstream MIT notice retained. The original repository remains as historical source. **Back up `personalChecklistData.txt` before uninstalling**; installing the replacement does not overwrite that file. Avoid running both checkouts simultaneously because both ship `pChecklist.ash`.
+
+The absorbed checker validates target/range size, handles list values correctly, includes equipped familiar items via `don_master_lib`, and uses plain text output. This is **experimental and has not yet been compiled in a live KoLmafia client**.
